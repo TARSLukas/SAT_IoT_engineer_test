@@ -30,12 +30,12 @@ while True:
         print("檢測站1狀態: ", check_1[0], ", 檢測站2狀態: ", check_2[0], ", 檢測站3狀態: ", check_3[0],
               ", 檢測站4狀態: ", check_4[0], ", 檢測站5狀態: ", check_5[0], ", 檢測站6狀態: ", check_6[0])
         
+        check = check_1 + check_2 + check_3 + check_4 + check_5 + check_6
+        for n in range(len(check)):
+            check_compute(check[n])
+        print("目前的良品總數: ", number_product_OK, "目前的不良品總數: ", number_product_NG)
+        
     except:
         print("connect fail")
-        
-    check = check_1 + check_2 + check_3 + check_4 + check_5 + check_6
-    for n in range(len(check)):
-        check_compute(check[n])
-    print("目前的良品總數: ", number_product_OK, "目前的不良品總數: ", number_product_NG)
-            
+       
     time.sleep(1)
